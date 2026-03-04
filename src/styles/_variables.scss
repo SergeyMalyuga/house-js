@@ -5,6 +5,7 @@ $white: rgb(255 255 255);
 
 /* green */
 $green-50: rgb(225 237 230);
+$green-100: rgb(212 232 217);
 $green-500: rgb(89 141 102);
 $green-700: rgb(55 107 68);
 
@@ -16,6 +17,13 @@ $gray-900: rgb(44 45 53);
 /* background */
 $bg-main: $gray-50;
 $bg-accent: $green-50;
+
+// ==== COMPONENTS ==== //
+$link-text-dark: $gray-900;
+$link-text-light: $gray-500;
+$link-text-hover: $green-500;
+$link-text-active: $green-700;
+$link-bg-focus: $green-100;
 
 // === TYPOGRAPHY ==== //
 $font-family-primary: 'Raleway', sans-serif;
