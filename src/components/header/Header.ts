@@ -3,7 +3,7 @@ import style from './Header.module.scss';
 export class Header {
   public render() {
     return `
-    <header class="${style.headerMain}" role="banner">
+    <header class="${style.header}" role="banner">
   <div class="header container">
     <a class="link-log" href="/">
       <img src="/images/vector/logo.svg" width="143" height="35" alt="Логотип компании 'House'">
