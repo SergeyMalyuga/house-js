@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import htmlInclude from "vite-plugin-html-include";
+import {patchCssModules} from "vite-css-modules";
 
 export default defineConfig({
   root: "src",
@@ -47,5 +48,11 @@ export default defineConfig({
       },
     },
   },
-  plugins: [htmlInclude()],
+  plugins: [htmlInclude(), patchCssModules()],
+  css: {
+    modules: {
+      localsConvention: 'camelCase',
+      generateScopedName: '[name]_[local]__[hash:base64:5]'
+    }
+  }
 });

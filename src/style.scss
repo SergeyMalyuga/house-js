@@ -1,6 +1,6 @@
 @use './styles/variables' as variables;
 @use './styles/fonts';
-@use './components/header/header';
+@use 'components/header/Header.module';
 
 *,
 *::before,
@@ -36,6 +36,7 @@ body {
 .container {
   max-width: 1140px;
   width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
