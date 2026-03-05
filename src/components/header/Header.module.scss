@@ -4,3 +4,32 @@
   padding: 33px 0;
   background-color: variables.$bg-accent;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  &Logo {
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  &Nav {
+    text-decoration: none;
+  }
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 58px;
+}
