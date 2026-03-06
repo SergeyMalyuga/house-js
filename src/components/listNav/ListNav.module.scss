@@ -18,16 +18,12 @@
   padding: 0 6px;
   transition: color 0.5s ease, background-color 0.3s ease;
 
-  &.header {
-    &Link {
+  &Header {
       color: variables.$link-text-dark;
-    }
   }
 
-  &.footer {
-    &Link {
+  &Footer {
       color: variables.$link-text-light;
-    }
   }
 
   &:hover {
@@ -36,13 +32,5 @@
 
   &:active {
     color: variables.$link-text-active;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    background-color: variables.$link-bg-focus;
   }
 }

@@ -1,7 +1,5 @@
 @use './styles/variables' as variables;
 @use './styles/fonts';
-@use 'components/header/Header.module';
-@use 'components/listNav/ListNav.module';
 
 *,
 *::before,
@@ -39,6 +37,18 @@ body {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.link {
+  &Focus {
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      background-color: variables.$link-bg-focus;
+    }
+  }
 }
 
 .visually-hidden {

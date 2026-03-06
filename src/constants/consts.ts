@@ -2,8 +2,8 @@ import type { NavLink } from '../types/NavLink.ts';
 import type {LinkType} from '../types/LinkType.ts';
 
 export const LINK_TYPE = {
-  HEADER: 'headerLink' as LinkType,
-  FOOTER: 'footerLink'  as LinkType,
+  HEADER: 'linkHeader' as LinkType,
+  FOOTER: 'linkFooter'  as LinkType,
 }
 
 export const LINKS_NAV_HEADER: NavLink[] = [

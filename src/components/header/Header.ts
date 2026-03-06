@@ -9,12 +9,19 @@ export class Header {
     return `
     <header class="${style.header}" role="banner">
   <div class="${style.content} container">
-    <a class="${style.linkLogo}" href="/">
+    <a class="${style.link}" href="/">
       <img src="/images/vector/logo.svg" width="143" height="35" alt="Логотип компании 'House'">
     </a>
-    <nav class="nav" aria-label="Основная навигация">
+    <nav class="${style.nav}" aria-label="Основная навигация">
  ${this.listNav.render()}
     </nav>
+    <div class="actions">
+    <a class="${style.link} ${style.linkCart} linkFocus" href="#">
+    <svg width="24" height="24">
+    <use href="./images/vector/header-cart.svg#cart"/>
+</svg>
+</a>
+</div>
   </div>
 </header>
     `;

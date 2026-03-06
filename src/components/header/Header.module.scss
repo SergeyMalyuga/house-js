@@ -11,16 +11,27 @@
 }
 
 .link {
-  &Logo {
     display: block;
+  transition: color 0.5s ease, background-color 0.3s ease;
 
-    img {
+    img, svg {
       display: block;
+  }
+
+  &Cart {
+    color: variables.$link-text-dark;
+
+    &:hover {
+      color: variables.$link-text-hover
+    }
+
+    &:active {
+      color: variables.$link-text-active
     }
   }
 }
 
 .nav {
-  margin-left: auto;
+  margin: 0 60px 0 auto;
 }
 
