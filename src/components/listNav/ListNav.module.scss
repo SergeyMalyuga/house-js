@@ -1,3 +1,5 @@
+@use '../../styles/variables' as variables;
+
 .list {
   list-style: none;
   display: flex;
@@ -6,4 +8,41 @@
 
 .link {
   text-decoration: none;
+  font-family: variables.$font-family-primary;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 0 6px;
+  transition: color 0.5s ease, background-color 0.3s ease;
+
+  &.header {
+    &Link {
+      color: variables.$link-text-dark;
+    }
+  }
+
+  &.footer {
+    &Link {
+      color: variables.$link-text-light;
+    }
+  }
+
+  &:hover {
+    color: variables.$link-text-hover;
+  }
+
+  &:active {
+    color: variables.$link-text-active;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    background-color: variables.$link-bg-focus;
+  }
 }

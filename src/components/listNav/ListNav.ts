@@ -14,7 +14,7 @@ export class ListNav {
             .map(
               (link) =>
                 `<li class="item">
-          <a class="link" href="${link.url}">${link.text}</a>
+          <a class="link ${link.type}" href="${link.url}">${link.text}</a>
         </li>`,
             )
             .join('')}

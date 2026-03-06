@@ -1,6 +1,7 @@
 @use './styles/variables' as variables;
 @use './styles/fonts';
 @use 'components/header/Header.module';
+@use 'components/listNav/ListNav.module';
 
 *,
 *::before,
