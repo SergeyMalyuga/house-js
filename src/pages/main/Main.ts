@@ -1,11 +1,11 @@
-import {Header} from '../../components/header/Header.ts';
+import { Header } from '../../components/header/Header.ts';
 
 export class MainPage {
   private header = new Header();
   private container: HTMLElement;
 
   constructor(container: HTMLElement) {
-    this.container = container
+    this.container = container;
   }
 
   public render() {

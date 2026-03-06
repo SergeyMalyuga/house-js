@@ -1,5 +1,5 @@
 import './style.scss';
-import {MainPage} from './pages/main/Main.ts';
+import { MainPage } from './pages/main/Main.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app') as HTMLElement;

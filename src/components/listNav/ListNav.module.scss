@@ -1,3 +1,9 @@
-.listNav {
+.list {
+  list-style: none;
+  display: flex;
+  gap: 58px;
+}
 
+.link {
+  text-decoration: none;
 }
