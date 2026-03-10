@@ -11,11 +11,11 @@
 }
 
 .link {
-    display: block;
+  display: block;
   transition: color 0.5s ease, background-color 0.3s ease;
 
-    img, svg {
-      display: block;
+  img, svg {
+    display: block;
   }
 
   &Cart {
@@ -32,6 +32,12 @@
 }
 
 .nav {
-  margin: 0 60px 0 auto;
+  margin-right: 60px;
 }
 
+.wrapper {
+  &Nav {
+    display: flex;
+    margin-left: auto;
+  }
+}

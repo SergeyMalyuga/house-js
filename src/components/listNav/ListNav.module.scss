@@ -18,6 +18,11 @@
   padding: 0 6px;
   transition: color 0.5s ease, background-color 0.3s ease;
 
+  @media (width <= 768px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
   &Header {
       color: variables.$link-text-dark;
   }
