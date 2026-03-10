@@ -16,8 +16,13 @@ export class Header {
         <nav class="${style.nav}" aria-label="Основная навигация">
  ${this.listNav.render()}
     </nav>
-    <div class="actions">
-    <a class="${style.link} ${style.linkCart} linkFocus" href="#">
+    <div class="${style.actions}">
+    <button class="${style.buttonBurger} focus" type="button">
+    <svg width="20" height="16">
+    <use href="/images/vector/burger.svg#burger"/>
+</svg>
+</button>
+    <a class="${style.link} ${style.linkCart} focus" href="#">
     <svg width="24" height="24">
     <use href="/images/vector/header-cart.svg#cart"/>
 </svg>

@@ -3,16 +3,25 @@
 .header {
   padding: 33px 0;
   background-color: variables.$bg-accent;
+
+  @media (width <= 700px) {
+    padding: 16px 0;
+  }
 }
 
 .content {
   display: flex;
   align-items: center;
+
+  @media (width <= 700px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .link {
   display: block;
-  transition: color 0.5s ease, background-color 0.3s ease;
+  transition: color 0.5s ease;
 
   img, svg {
     display: block;
@@ -33,11 +42,59 @@
 
 .nav {
   margin-right: 60px;
+
+  @media (width <= 700px) {
+    margin-right: 0;
+  }
+
+  @media (width <= 480px) {
+    display: none;
+  }
 }
 
 .wrapper {
   &Nav {
     display: flex;
     margin-left: auto;
+
+    @media (width <= 700px) {
+      margin-left: 0;
+      width: 100%;
+      padding-top: 18px;
+      justify-content: space-between;
+      border-top: 1px solid variables.$border-wrapper-color;
+    }
+  }
+}
+
+.button {
+  &Burger {
+    display: none;
+    color: variables.$button-text-dark;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: color 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: variables.$button-text-hover;
+    }
+
+    &:active {
+      color: variables.$button-text-active;
+    }
+
+    @media (width <= 480px) {
+      display: block;
+    }
+  }
+}
+
+.actions {
+  @media (width <= 480px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 }

@@ -47,16 +47,16 @@ body {
   }
 }
 
-.link {
-  &Focus {
+.focus {
     &:focus {
       outline: none;
     }
 
     &:focus-visible {
-      background-color: variables.$link-bg-focus;
+      outline: 2px solid black;
+      border-radius: 2px;
+      outline-offset: 2px;
     }
-  }
 }
 
 .visually-hidden {

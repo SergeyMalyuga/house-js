@@ -11,6 +11,7 @@ $green-700: rgb(55 107 68);
 
 /* gray */
 $gray-50: rgb(244 246 245);
+$gray-100: rgb(195 209 198);
 $gray-500: rgb(134 146 139);
 $gray-900: rgb(44 45 53);
 
@@ -19,11 +20,21 @@ $bg-main: $gray-50;
 $bg-accent: $green-50;
 
 // ==== COMPONENTS ==== //
+
+/* link */
 $link-text-dark: $gray-900;
 $link-text-light: $gray-500;
 $link-text-hover: $green-500;
 $link-text-active: $green-700;
 $link-bg-focus: $green-100;
+
+/* border */
+$border-wrapper-color: $gray-100;
+
+/* button */
+$button-text-dark: $gray-900;
+$button-text-hover: $green-500;
+$button-text-active: $green-700;
 
 // === TYPOGRAPHY ==== //
 $font-family-primary: 'Raleway', sans-serif;
