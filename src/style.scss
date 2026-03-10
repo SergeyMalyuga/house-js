@@ -45,6 +45,10 @@ body {
   @media (width <= 576px) {
     padding: 0 33px;
   }
+
+  @media (width <= 480px) {
+    padding: 0 15px;
+  }
 }
 
 .focus {

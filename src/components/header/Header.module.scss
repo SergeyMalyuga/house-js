@@ -4,7 +4,8 @@
   padding: 33px 0;
   background-color: variables.$bg-accent;
 
-  @media (width <= 700px) {
+  @media (width <= 480px) {
+    background-color: variables.$white;
     padding: 16px 0;
   }
 }
@@ -48,21 +49,47 @@
   }
 
   @media (width <= 480px) {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+    transform: translateX(-100%);
+    background-color: variables.$bg-accent;
+    height: 100vh;
+    padding: 76px 15px 15px;
+    transition: transform 0.5s ease;
   }
 }
 
 .wrapper {
   &Nav {
+    position: relative;
     display: flex;
     margin-left: auto;
+    z-index: 1;
 
     @media (width <= 700px) {
       margin-left: 0;
       width: 100%;
-      padding-top: 18px;
+      padding: 16px 0;
       justify-content: space-between;
       border-top: 1px solid variables.$border-wrapper-color;
+    }
+
+    @media (width <= 480px) {
+      border-top: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 0;
+        left: -15px;
+        right: -15px;
+        background-color: variables.$bg-accent;
+        z-index: -1;
+      }
     }
   }
 }
@@ -76,6 +103,7 @@
     background-color: transparent;
     transition: color 0.5s ease;
     cursor: pointer;
+    z-index: 1;
 
     &:hover {
       color: variables.$button-text-hover;

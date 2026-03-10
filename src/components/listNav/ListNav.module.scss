@@ -4,6 +4,13 @@
   list-style: none;
   display: flex;
   gap: 58px;
+
+  @media (width <= 480px) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .link {
