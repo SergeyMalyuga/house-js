@@ -1,8 +1,10 @@
 import { Header } from '../../components/header/Header.ts';
+import {Hero} from '../../components/hero/Hero.ts';
 
 export class MainPage {
-  private header = new Header();
   private container: HTMLElement;
+  private header = new Header();
+  private hero = new Hero();
 
   constructor(container: HTMLElement) {
     this.container = container;
@@ -11,7 +13,9 @@ export class MainPage {
   public render() {
     this.container.innerHTML = `
     ${this.header.render()}
-    <main role="main"></main>
+    <main role="main">
+    ${this.hero.render()}
+</main>
     `;
   }
 }
