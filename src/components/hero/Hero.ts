@@ -1,8 +1,12 @@
 import styles from './Hero.module.scss';
+import {Button} from '../button/Button.ts';
 
 export class Hero {
+  private readonly button = new Button({text: 'Продукция', width: 225})
+
   public render() {
-    return `
+    const section = document.createElement('section');
+    section.innerHTML = `
     <section>
     <div class="${styles.content} container">
     <div class="${styles.blockImage}">
@@ -12,11 +16,16 @@ export class Hero {
     <img src="/images/raster/hero-bird-576.png" alt=""/>
 </picture>
 </div>
-<div class="${styles.blockInfo}">
+<div class="${styles.blockInfo} fg">
 <h1 class="${styles.title}">Реплики картин от <span>Ink. House</span></h1>
 <p class="${styles.text}">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
 </div>
 </div>
 </section>`
+
+    const blockInfo = section.querySelector(`.${styles.blockInfo}`);
+    blockInfo?.appendChild(this.button.render());
+
+    return section;
   }
 }

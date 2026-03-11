@@ -1,0 +1,8 @@
+@use '../../styles/variables' as variables;
+
+.button {
+  padding: 20px 60px;
+  color: variables.$button-text-light;
+  border: 1px solid variables.$button-border-color;
+  background-color: transparent;
+}

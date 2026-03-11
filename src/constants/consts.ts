@@ -24,4 +24,16 @@ export const LINKS_NAV_HEADER: NavLink[] = [
   },
 ];
 
+export const DEFAULT_BTN_WIDTH = 100;
+
+export const BUTTON_MEASURE = {
+  pixels: 'px',
+  percentages: '%'
+} as const
+
+export const Hooks = {
+  HEADER: '[data-hook="header"]',
+  HERO: '[data-hook="hero"]',
+  FEATURES: '[data-hook="features"]',
+} as const;
 
