@@ -1,1 +1,80 @@
 @use '../../styles/variables' as variables;
+
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+.block {
+  &Image {
+    display: flex;
+    align-items: center;
+    max-width: 540px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &Info {
+    max-width: 540px;
+    width: 100%;
+    padding: 145px 0;
+
+    @media (width <= 768px) {
+      padding: 35px 0;
+    }
+  }
+
+  @media (width <= 768px) {
+    max-width: 330px;
+  }
+
+  @media (width <= 576px) {
+    max-width: 195px;
+  }
+}
+
+.title {
+  font-size: 60px;
+  line-height: 110%;
+  text-align: left;
+  margin-bottom: 20px;
+
+  span {
+    color: variables.$title-accent-color;
+  }
+
+  @media (width <= 768px) {
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  @media (width <= 576px) {
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  @media (width <= 480px) {
+    font-size: 30px;
+  }
+}
+
+.text {
+  color: variables.$text-accent-color;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: left;
+
+  @media (width <= 576px) {
+    font-size: 16px;
+  }
+
+  @media (width <= 480px) {
+    font-size: 14px;
+  }
+}
