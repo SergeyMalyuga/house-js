@@ -1,8 +1,40 @@
 @use '../../styles/variables' as variables;
 
 .button {
-  padding: 20px 60px;
   color: variables.$button-text-light;
   border: 1px solid variables.$button-border-color;
   background-color: transparent;
+  font-family: variables.$font-family-primary;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+  text-align: center;
+
+  &General {
+    padding: 20px 60px;
+    width: 225px;
+
+    @media (width <= 768px) {
+      width: 210px;
+      padding: 17.5px 51.5px ;
+    }
+
+    @media (width <= 700px) {
+      width: min-content;
+      font-size: 18px;
+      line-height: 21px;
+      padding: 13.5px 41px;
+    }
+
+    @media (width <= 480px) {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 13.5px 29px;
+    }
+  }
+
+  &Card {
+    width: 100%;
+  }
 }

@@ -1,9 +1,9 @@
-import type { NavLink } from '../types/NavLink.ts';
+import type {NavLink} from '../types/NavLink.ts';
 import type {LinkType} from '../types/LinkType.ts';
 
 export const LINK_TYPE = {
   HEADER: 'linkHeader' as LinkType,
-  FOOTER: 'linkFooter'  as LinkType,
+  FOOTER: 'linkFooter' as LinkType,
 }
 
 export const LINKS_NAV_HEADER: NavLink[] = [
@@ -23,13 +23,6 @@ export const LINKS_NAV_HEADER: NavLink[] = [
     type: LINK_TYPE.HEADER
   },
 ];
-
-export const DEFAULT_BTN_WIDTH = 100;
-
-export const BUTTON_MEASURE = {
-  pixels: 'px',
-  percentages: '%'
-} as const
 
 export const Hooks = {
   HEADER: '[data-hook="header"]',

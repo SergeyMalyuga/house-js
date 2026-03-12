@@ -2,7 +2,7 @@ import styles from './Hero.module.scss';
 import {Button} from '../button/Button.ts';
 
 export class Hero {
-  private readonly button = new Button({text: 'Продукция', width: 225})
+  private readonly button = new Button({text: 'Продукция'})
 
   public render() {
     const section = document.createElement('section');
