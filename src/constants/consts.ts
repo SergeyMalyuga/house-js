@@ -31,9 +31,9 @@ export const Hooks = {
 } as const;
 
 export enum Country {
-  FRANCE = 'Франция',
-  GERMANY = 'Германия',
-  ENGLAND = 'Англия'
+  FR = 'Франция',
+  DE = 'Германия',
+  GB = 'Англия'
 }
 
 export const SectionID = {
