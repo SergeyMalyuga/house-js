@@ -30,6 +30,12 @@ export const Hooks = {
   GALLERY: '[data-hook="gallery"]',
 } as const;
 
+export enum Country {
+  FRANCE = 'Франция',
+  GERMANY = 'Германия',
+  ENGLAND = 'Англия'
+}
+
 export const SectionID = {
   HERO: 'hero',
   GALLERY: 'gallery',
