@@ -40,8 +40,12 @@ $border-wrapper-color: $gray-100;
 /* button */
 $button-text-dark: $gray-900;
 $button-text-light: $green-500;
-$button-text-hover: $green-500;
+$button-text-hover-dark: $green-500;
+$button-text-hover-light: $white;
 $button-text-active: $green-700;
+$button-bg-hover: $green-500;
+$button-bg-active: $green-700;
+$button-bg-focus: $green-100;
 $button-border-color: $green-500;
 
 // === TYPOGRAPHY ==== //
