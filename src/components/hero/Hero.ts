@@ -1,13 +1,14 @@
 import styles from './Hero.module.scss';
 import {Button} from '../button/Button.ts';
+import {SectionID} from '../../constants/consts.ts';
 
 export class Hero {
   private readonly button = new Button({text: 'Продукция'})
 
   public render() {
     const section = document.createElement('section');
+    section.setAttribute('id', SectionID.HERO);
     section.innerHTML = `
-    <section>
     <div class="${styles.content} container">
     <div class="${styles.blockImage}">
     <picture>
@@ -21,7 +22,7 @@ export class Hero {
 <p class="${styles.text}">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
 </div>
 </div>
-</section>`
+`
 
     const blockInfo = section.querySelector(`.${styles.blockInfo}`);
     blockInfo?.appendChild(this.button.render());

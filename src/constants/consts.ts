@@ -27,6 +27,11 @@ export const LINKS_NAV_HEADER: NavLink[] = [
 export const Hooks = {
   HEADER: '[data-hook="header"]',
   HERO: '[data-hook="hero"]',
-  FEATURES: '[data-hook="features"]',
+  GALLERY: '[data-hook="gallery"]',
+} as const;
+
+export const SectionID = {
+  HERO: 'hero',
+  GALLERY: 'gallery',
 } as const;
 
