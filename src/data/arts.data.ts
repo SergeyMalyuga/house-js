@@ -6,7 +6,7 @@ export const getArts = (): ArtCard[] =>
   [
     {
       id: nanoid(),
-      image: '',
+      image: {desktop: '', tablet: '', tabletMini: '', mobile: ''},
       author: '',
       name: '',
       details: '',

@@ -1,8 +1,9 @@
 import type {Country} from '../constants/consts.ts';
+import type {ImageResolutions} from './ImageResolutions.model.ts';
 
 export interface ArtCard {
   id: string;
-  image: string;
+  image: ImageResolutions;
   author: string;
   name: string;
   details: string;
