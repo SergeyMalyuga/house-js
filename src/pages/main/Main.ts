@@ -1,17 +1,21 @@
 import {Header} from '../../components/header/Header.ts';
 import {Hero} from '../../components/hero/Hero.ts';
-import type {DataHookType} from '../../types/DataHook.type.ts';
+import type {DataHook} from '../../types/DataHook.type.ts';
 import {Hooks} from '../../constants/consts.ts';
 import {Gallery} from '../../components/gallery/Gallery.ts';
+import type {MainProps} from '../../models/MainProps.model.ts';
 
 export class MainPage {
   private container: HTMLElement;
-  private header = new Header();
-  private hero = new Hero();
-  private gallery = new Gallery();
+  private header: Header;
+  private hero: Hero;
+  private gallery: Gallery;
 
-  constructor(container: HTMLElement) {
+  constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
+    this.header = props.header;
+    this.hero = props.hero;
+    this.gallery = props.gallery;
   }
 
   public render() {
@@ -26,7 +30,7 @@ export class MainPage {
     this.mount(this.gallery.render(), Hooks.GALLERY);
   }
 
-  private mount(element: HTMLElement, data: DataHookType) {
+  private mount(element: HTMLElement, data: DataHook) {
     const container = this.container.querySelector<HTMLElement>(data);
     container?.appendChild(element);
 

@@ -1,8 +1,8 @@
-import type {ArtCard} from '../models/ArtCard.model.ts';
+import type {Art} from '../models/Art.model.ts';
 import {nanoid} from '@reduxjs/toolkit';
 import {Country} from '../constants/consts.ts';
 
-export const getArts = (): ArtCard[] =>
+export const getArts = (): Art[] =>
   [
     {
       id: nanoid(),
