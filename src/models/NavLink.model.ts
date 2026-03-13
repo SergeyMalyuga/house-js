@@ -1,7 +1,7 @@
-import type {LinkTypeType} from '../types/LinkType.type.ts';
+import type {LinkType} from '../types/LinkType.type.ts';
 
-export interface NavLinkModel {
+export interface NavLink {
   text: string;
   url: string;
-  type: LinkTypeType;
+  type: LinkType;
 }

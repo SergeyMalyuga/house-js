@@ -1,12 +1,12 @@
-import type {NavLinkModel} from '../models/NavLink.model.ts';
-import type {LinkTypeType} from '../types/LinkType.type.ts';
+import type {NavLink} from '../models/NavLink.model.ts';
+import type {LinkType} from '../types/LinkType.type.ts';
 
 export const LINK_TYPE = {
-  HEADER: 'linkHeader' as LinkTypeType,
-  FOOTER: 'linkFooter' as LinkTypeType,
+  HEADER: 'linkHeader' as LinkType,
+  FOOTER: 'linkFooter' as LinkType,
 }
 
-export const LINKS_NAV_HEADER: NavLinkModel[] = [
+export const LINKS_NAV_HEADER: NavLink[] = [
   {
     text: 'Репродукции',
     url: '#',
@@ -31,9 +31,9 @@ export const Hooks = {
 } as const;
 
 export enum Country {
-  FR = 'Франция',
-  DE = 'Германия',
-  GB = 'Англия'
+  FR = 'France',
+  DE = 'Germany',
+  GB = 'England'
 }
 
 export const SectionID = {

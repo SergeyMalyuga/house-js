@@ -1,1 +1,1 @@
-export type LinkTypeType = 'header' | 'footer';
+export type LinkType = 'header' | 'footer';

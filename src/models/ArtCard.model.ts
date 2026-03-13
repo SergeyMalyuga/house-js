@@ -1,6 +1,6 @@
 import type {Country} from '../constants/consts.ts';
 
-export interface ArtCardModel {
+export interface ArtCard {
   id: string;
   image: string;
   author: string;
