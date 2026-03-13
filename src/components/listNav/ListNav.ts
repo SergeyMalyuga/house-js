@@ -1,12 +1,12 @@
-import type {NavLink} from '../../types/NavLink.ts';
+import type {NavLinkModel} from '../../models/NavLink.model.ts';
 import style from './ListNav.module.scss'
 import {LINK_TYPE} from '../../constants/consts.ts';
-import type {LinkType} from '../../types/LinkType.ts';
+import type {LinkTypeType} from '../../types/LinkType.type.ts';
 
 export class ListNav {
-  private links: NavLink[];
+  private links: NavLinkModel[];
 
-  constructor(links: NavLink[]) {
+  constructor(links: NavLinkModel[]) {
     this.links = links;
   }
 
@@ -25,7 +25,7 @@ export class ListNav {
     `;
   }
 
-  private getLinkModifier(type: LinkType) {
+  private getLinkModifier(type: LinkTypeType) {
     return type === LINK_TYPE.HEADER ? style.linkHeader : style.linkFooter
   }
 }

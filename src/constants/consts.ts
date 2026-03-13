@@ -1,12 +1,12 @@
-import type {NavLink} from '../types/NavLink.ts';
-import type {LinkType} from '../types/LinkType.ts';
+import type {NavLinkModel} from '../models/NavLink.model.ts';
+import type {LinkTypeType} from '../types/LinkType.type.ts';
 
 export const LINK_TYPE = {
-  HEADER: 'linkHeader' as LinkType,
-  FOOTER: 'linkFooter' as LinkType,
+  HEADER: 'linkHeader' as LinkTypeType,
+  FOOTER: 'linkFooter' as LinkTypeType,
 }
 
-export const LINKS_NAV_HEADER: NavLink[] = [
+export const LINKS_NAV_HEADER: NavLinkModel[] = [
   {
     text: 'Репродукции',
     url: '#',

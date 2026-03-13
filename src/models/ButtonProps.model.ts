@@ -1,4 +1,4 @@
-export interface ButtonProps {
+export interface ButtonPropsModel {
   text: string;
   classType?: string;
 }
