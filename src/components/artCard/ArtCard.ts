@@ -12,12 +12,13 @@ export class ArtCard {
       <source srcset="${card.image.tabletMini}" media="(max-width: 576px)"/>
       <img src="${card.image.desktop}">
   </picture>
-  <span>${card.author}</span>
-  <h2>${card.name}</h2>
-  <span>${card.details}</span>
-  <data value="${card.price}">${card.price} руб.</data>
+  <div class="${styles.wrapperInfo}">
+    <span class="${styles.author}">${card.author}</span>
+  <h2 class="${styles.title}">${card.name}</h2>
+  <span class="${styles.details}">${card.details}</span>
+  <data class="${styles.price}" value="${card.price}">${card.price} руб.</data>
+</div>
   `
-
     return article;
   }
 }

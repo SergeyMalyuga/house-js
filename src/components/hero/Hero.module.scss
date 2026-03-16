@@ -52,10 +52,12 @@
 }
 
 .title {
+  color: variables.$title-main-color;
   font-size: 60px;
   line-height: 110%;
   text-align: left;
   margin-bottom: 20px;
+  font-weight: 500;
 
   span {
     color: variables.$title-accent-color;
