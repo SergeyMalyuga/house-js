@@ -1,15 +1,14 @@
-import type {ButtonPropsModel} from '../../models/ButtonProps.model.ts';
+import type {ButtonProps} from '../../models/ButtonProps.model.ts';
 import styles from './Button.module.scss'
+import type {ButtonType} from '../../types/Button.type.ts';
 
 export class Button {
   private readonly text: string;
-  private readonly classType: string = styles.buttonGeneral;
+  private readonly classType: ButtonType;
 
-  constructor(props: ButtonPropsModel) {
+  constructor(props: ButtonProps) {
     this.text = props.text;
-    if (props.classType) {
-      this.classType = props.classType;
-    }
+    this.classType = props.classType;
   }
 
   public render() {

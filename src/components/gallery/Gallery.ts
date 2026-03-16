@@ -9,7 +9,7 @@ export class Gallery {
   private element: HTMLElement | null = null;
   private artsService: ArtsService;
   private artCard = new ArtCard();
-  private currentCountry = Country.DE;
+  private currentCountry = Country.FR;
 
   constructor(artsService: ArtsService) {
     this.artsService = artsService;
@@ -35,10 +35,10 @@ export class Gallery {
     return section;
   }
 
-  private refresh(arts: Art[]) {
+/*  private refresh(arts: Art[]) {
     this.arts = this.artsService.getByCountry(this.currentCountry);
     this.renderCards();
-  }
+  }*/
 
   private renderCards() {
     const list = this.element?.querySelector(`.${styles.list}`) as HTMLElement;

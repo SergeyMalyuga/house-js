@@ -1,5 +1,6 @@
 import type {NavLink} from '../models/NavLink.model.ts';
 import type {LinkType} from '../types/LinkType.type.ts';
+import buttonStyles from '../components/button/Button.module.scss'
 
 export const LINK_TYPE = {
   HEADER: 'linkHeader' as LinkType,
@@ -39,5 +40,10 @@ export enum Country {
 export const SectionID = {
   HERO: 'hero',
   GALLERY: 'gallery',
+} as const;
+
+export const BUTTON_TYPE = {
+  CARD: `${buttonStyles.buttonCard}`,
+  GENERAL: `${buttonStyles.buttonGeneral}`,
 } as const;
 

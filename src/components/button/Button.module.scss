@@ -39,21 +39,27 @@
       padding: 17.5px 51.5px;
     }
 
-    @media (width <= 700px) {
+    @media (width <= 576px) {
       width: min-content;
       font-size: 18px;
       line-height: 21px;
       padding: 13.5px 41px;
     }
 
+
     @media (width <= 480px) {
-      font-size: 18px;
-      line-height: 21px;
       padding: 13.5px 29px;
     }
   }
 
   &Card {
     width: 100%;
+    padding: 20px 5px;
+
+    @media (width <= 576px) {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 13.5px 5px;
+    }
   }
 }

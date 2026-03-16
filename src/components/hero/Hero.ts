@@ -1,9 +1,9 @@
 import styles from './Hero.module.scss';
 import {Button} from '../button/Button.ts';
-import {SectionID} from '../../constants/consts.ts';
+import {BUTTON_TYPE, SectionID} from '../../constants/consts.ts';
 
 export class Hero {
-  private readonly button = new Button({text: 'Продукция'})
+  private readonly button = new Button({text: 'Продукция', classType: BUTTON_TYPE.GENERAL});
 
   public render() {
     const section = document.createElement('section');
