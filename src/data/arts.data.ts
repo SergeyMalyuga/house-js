@@ -106,10 +106,10 @@ export const getArts = (): Art[] =>
     {
       id: nanoid(),
       image: {
-        desktop: '/images/raster/de-bright-birds-desktop.jpg',
-        tablet: '/images/raster/de-bright-birds-desktop.jpg',
-        tabletMini: '/images/raster/de-bright-birds-desktop.jpg',
-        mobile: '/images/raster/de-bright-birds-desktop.jpg'
+        desktop: '/images/raster/de-chicks-desktop.jpg',
+        tablet: '/images/raster/de-chicks-tablet.jpg',
+        tabletMini: '/images/raster/de-chicks-tablet-mini.jpg',
+        mobile: '/images/raster/de-chicks-mobile.jpg'
       },
       author: 'Макс Рихтер',
       name: 'Птенцы',

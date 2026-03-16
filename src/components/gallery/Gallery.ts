@@ -1,5 +1,5 @@
 import styles from './Gallery.module.scss'
-import {SectionID} from '../../constants/consts.ts';
+import {Country, SectionID} from '../../constants/consts.ts';
 import type {Art} from '../../models/Art.model.ts';
 import {ArtCard} from '../artCard/ArtCard.ts';
 import type {ArtsService} from '../../services/ArtsService.ts';
@@ -9,10 +9,11 @@ export class Gallery {
   private element: HTMLElement | null = null;
   private artsService: ArtsService;
   private artCard = new ArtCard();
+  private currentCountry = Country.DE;
 
   constructor(artsService: ArtsService) {
     this.artsService = artsService;
-    this.arts = this.artsService.getArts()
+    this.arts = this.artsService.getByCountry(this.currentCountry);
   }
 
   public render(): HTMLElement {
@@ -35,7 +36,7 @@ export class Gallery {
   }
 
   private refresh(arts: Art[]) {
-    this.arts = arts;
+    this.arts = this.artsService.getByCountry(this.currentCountry);
     this.renderCards();
   }
 
