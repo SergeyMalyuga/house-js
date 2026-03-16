@@ -1,5 +1,15 @@
 @use '../../styles/variables' as variables;
 
 .list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @media (width <= 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (width <= 480px) {
+    grid-template-columns: 1fr;
+  }
 }
