@@ -14,15 +14,25 @@
   }
 
   &CountriesToggle {
-    color: variables.$button-text-dark;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+
+    @media (width <= 480px) {
+      gap: 20px;
+    }
   }
 }
 
 .top {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 30px;
+
+  @media (width <= 720px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .title {

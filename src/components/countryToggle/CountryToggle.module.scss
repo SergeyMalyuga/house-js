@@ -1,1 +1,37 @@
 @use '../../styles/variables' as variables;
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: variables.$country-toggle-bg;
+  color: variables.$button-text-dark;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.5s ease, background 0.5s ease;
+
+  &:hover {
+    background-color: variables.$country-toggle-hover-bg;
+    color: variables.$white;
+  }
+
+  &:active {
+    background-color: variables.$country-toggle-active-bg;
+  }
+
+  &Active {
+    background-color: variables.$country-toggle-active-bg;
+    color: variables.$white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid black;
+    outline-offset: -2px;
+  }
+}

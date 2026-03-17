@@ -36,15 +36,8 @@ export class Gallery {
 </ul>
 </div>
     `
-    const list = section.querySelector(`.${styles.listCountriesToggle}`) as HTMLElement;
-    for (let country of this.countries) {
-      const item = document.createElement('li');
-      const button = new CountryToggle({countryToggle: country, onCountryChange: this.onCountryChange});
-      item.appendChild(button.render());
-      list.appendChild(item);
-    }
-
     this.element = section;
+    this.renderCountryToggle();
     this.renderCards();
 
     return section;
@@ -53,6 +46,22 @@ export class Gallery {
   public refresh(): void {
     this.arts = this.artsService.getByCountry(this.currentCountry);
     this.renderCards();
+  }
+
+  private renderCountryToggle() {
+    const list = this.element?.querySelector(`.${styles.listCountriesToggle}`) as HTMLElement;
+    if (!list) return;
+    list.innerHTML = '';
+    for (let country of this.countries) {
+      const item = document.createElement('li');
+      const button = new CountryToggle({
+        countryToggle: country,
+        onCountryChange: this.onCountryChange,
+        isActive: country.country === this.currentCountry
+      });
+      item.appendChild(button.render());
+      list.appendChild(item);
+    }
   }
 
   private renderCards() {
@@ -69,6 +78,7 @@ export class Gallery {
 
   private onCountryChange = (newCountry: Country) => {
     this.currentCountry = newCountry;
+    this.renderCountryToggle();
     this.refresh()
   }
 }
