@@ -12,4 +12,31 @@
   @media (width <= 480px) {
     grid-template-columns: 1fr;
   }
+
+  &CountriesToggle {
+    color: variables.$button-text-dark;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
+
+.top {
+  margin-bottom: 30px;
+}
+
+.title {
+  color: variables.$title-main-color;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 110%;
+  text-align: left;
+
+  @media (width <= 768px) {
+    font-size: 30px;
+  }
+
+  @media (width <= 576px) {
+    font-size: 24px;
+  }
 }

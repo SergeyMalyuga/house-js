@@ -3,6 +3,8 @@ import {Country, SectionID} from '../../constants/consts.ts';
 import type {Art} from '../../models/Art.model.ts';
 import {ArtCard} from '../artCard/ArtCard.ts';
 import type {ArtsService} from '../../services/ArtsService.ts';
+import {getCountriesToggle} from '../../data/countryToggle.data.ts';
+import {CountryToggle} from '../countryToggle/CountryToggle.ts';
 
 export class Gallery {
   private arts: Art[];
@@ -10,6 +12,7 @@ export class Gallery {
   private artsService: ArtsService;
   private artCard = new ArtCard();
   private currentCountry = Country.FR;
+  private countries = getCountriesToggle();
 
   constructor(artsService: ArtsService) {
     this.artsService = artsService;
@@ -25,20 +28,32 @@ export class Gallery {
     section.setAttribute('id', SectionID.GALLERY);
     section.innerHTML = `
     <div class="container">
+    <div class="${styles.top}">
+<h2 class="${styles.title}">Репродукции</h2>
+<ul class="${styles.listCountriesToggle}"></ul>
+</div>
     <ul class="${styles.list}">
 </ul>
 </div>
     `
+    const list = section.querySelector(`.${styles.listCountriesToggle}`) as HTMLElement;
+    for (let country of this.countries) {
+      const item = document.createElement('li');
+      const button = new CountryToggle({countryToggle: country, onCountryChange: this.onCountryChange});
+      item.appendChild(button.render());
+      list.appendChild(item);
+    }
+
     this.element = section;
     this.renderCards();
 
     return section;
   }
 
-/*  private refresh(arts: Art[]) {
+  public refresh(): void {
     this.arts = this.artsService.getByCountry(this.currentCountry);
     this.renderCards();
-  }*/
+  }
 
   private renderCards() {
     const list = this.element?.querySelector(`.${styles.list}`) as HTMLElement;
@@ -50,5 +65,10 @@ export class Gallery {
       item.appendChild(card);
       list.appendChild(item);
     }
+  }
+
+  private onCountryChange = (newCountry: Country) => {
+    this.currentCountry = newCountry;
+    this.refresh()
   }
 }
