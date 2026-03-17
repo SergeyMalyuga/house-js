@@ -1,5 +1,5 @@
 import type {Country} from '../../constants/consts.ts';
-import type {CountryToggleProps} from '../../models/CountryToggleProps.ts';
+import type {CountryToggleProps} from '../../models/CountryToggleProps.model.ts';
 
 export class CountryToggle {
   private readonly text: string;
