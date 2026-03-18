@@ -22,7 +22,6 @@ export class NewCollection {
     `;
 
     const container = section.querySelector('.container') as HTMLElement;
-    console.log(container)
     container.appendChild(button.render());
 
     return section;

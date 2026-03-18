@@ -62,5 +62,9 @@
 .wrapper {
   &Text {
     margin-bottom: 60px;
+
+    @media (width <= 768px) {
+      margin-bottom: 30px;
+    }
   }
 }
