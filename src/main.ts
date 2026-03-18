@@ -6,6 +6,7 @@ import {ArtsService} from './services/ArtsService.ts';
 import {Header} from './components/header/Header.ts';
 import {Hero} from './components/hero/Hero.ts';
 import {Gallery} from './components/gallery/Gallery.ts';
+import {NewCollection} from './components/new-collection/NewCollection.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app') as HTMLElement;
@@ -14,8 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = new Header();
   const hero = new Hero();
   const gallery = new Gallery(artsService);
+  const newCollection = new NewCollection();
 
-  const mainPage = new MainPage(app, {header, hero, gallery});
+  const mainPage = new MainPage(app, {header, hero, gallery, newCollection});
   mainPage.render();
 
   const navMenu = document.querySelector(`.${styles.nav}`) as HTMLElement;
