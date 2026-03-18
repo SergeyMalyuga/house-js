@@ -1,5 +1,5 @@
-import type {Country} from '../../constants/consts.ts';
-import type {CountryToggleProps} from '../../models/CountryToggleProps.model.ts';
+import type { Country } from '../../constants/consts.ts';
+import type { CountryToggleProps } from '../../models/CountryToggleProps.model.ts';
 import styles from './CountryToggle.module.scss';
 
 export class CountryToggle {
@@ -16,11 +16,11 @@ export class CountryToggle {
   }
 
   public render(): HTMLButtonElement {
-    const button = document.createElement("button");
+    const button = document.createElement('button');
     button.className = styles.button;
     button.textContent = this.text;
-    button.addEventListener("click", () => this.onCountryChange(this.country));
-    if(this.isActive) {
+    button.addEventListener('click', () => this.onCountryChange(this.country));
+    if (this.isActive) {
       button.classList.add(`${styles.buttonActive}`);
     }
     return button;

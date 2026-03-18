@@ -15,6 +15,12 @@ $gray-100: rgb(195 209 198);
 $gray-500: rgb(134 146 139);
 $gray-900: rgb(44 45 53);
 
+/* yellow */
+$yellow-50: rgb(250 235 151);
+$yellow-100: rgb(238 219 109);
+$yellow-200: rgb(217 185 73);
+$yellow-300: rgb(163 131 20);
+
 /* background */
 $bg-main: $gray-50;
 $bg-accent: $green-50;
@@ -31,11 +37,13 @@ $link-bg-focus: $green-100;
 /* text */
 $text-main-color: $gray-900;
 $text-accent-color: $gray-500;
+$text-accent-light-color: $white;
 $text-accent-green-color: $green-500;
 
 /* title */
 $title-main-color: $gray-900;
 $title-accent-color: $green-500;
+$title-accent-light-color: $white;
 
 /* border */
 $border-wrapper-color: $gray-100;

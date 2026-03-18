@@ -1,12 +1,12 @@
 import styles from './ArtCard.module.scss';
-import type {Art} from '../../models/Art.model.ts';
-import {Button} from '../button/Button.ts';
-import {BUTTON_TYPE} from '../../constants/consts.ts';
+import type { Art } from '../../models/Art.model.ts';
+import { Button } from '../button/Button.ts';
+import { BUTTON_TYPE } from '../../constants/consts.ts';
 
 export class ArtCard {
   public render(card: Art): HTMLElement {
     const article = document.createElement('article');
-    const button = new Button({text: 'Купить', classType: BUTTON_TYPE.CARD});
+    const button = new Button({ text: 'Купить', classType: BUTTON_TYPE.CARD });
     article.className = `${styles.card}`;
     article.innerHTML = `
       <picture class="${styles.wrapperImage}">
@@ -21,7 +21,7 @@ export class ArtCard {
   <span class="${styles.details}">${card.details}</span>
   <data class="${styles.price}" value="${card.price}">${card.price} руб.</data>
 </div>
-  `
+  `;
     article.appendChild(button.render());
 
     return article;

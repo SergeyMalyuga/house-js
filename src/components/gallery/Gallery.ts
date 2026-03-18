@@ -1,10 +1,10 @@
-import styles from './Gallery.module.scss'
-import {Country, SectionID} from '../../constants/consts.ts';
-import type {Art} from '../../models/Art.model.ts';
-import {ArtCard} from '../artCard/ArtCard.ts';
-import type {ArtsService} from '../../services/ArtsService.ts';
-import {getCountriesToggle} from '../../data/countryToggle.data.ts';
-import {CountryToggle} from '../countryToggle/CountryToggle.ts';
+import styles from './Gallery.module.scss';
+import { Country, SectionID } from '../../constants/consts.ts';
+import type { Art } from '../../models/Art.model.ts';
+import { ArtCard } from '../artCard/ArtCard.ts';
+import type { ArtsService } from '../../services/ArtsService.ts';
+import { getCountriesToggle } from '../../data/countryToggle.data.ts';
+import { CountryToggle } from '../countryToggle/CountryToggle.ts';
 
 export class Gallery {
   private arts: Art[];
@@ -36,7 +36,7 @@ export class Gallery {
     <ul class="${styles.list}">
 </ul>
 </div>
-    `
+    `;
     this.element = section;
     this.renderCountryToggle();
     this.renderCards();
@@ -50,7 +50,9 @@ export class Gallery {
   }
 
   private renderCountryToggle() {
-    const list = this.element?.querySelector(`.${styles.listCountriesToggle}`) as HTMLElement;
+    const list = this.element?.querySelector(
+      `.${styles.listCountriesToggle}`,
+    ) as HTMLElement;
     if (!list) return;
     list.innerHTML = '';
     for (let country of this.countries) {
@@ -58,7 +60,7 @@ export class Gallery {
       const button = new CountryToggle({
         countryToggle: country,
         onCountryChange: this.onCountryChange,
-        isActive: country.country === this.currentCountry
+        isActive: country.country === this.currentCountry,
       });
       item.appendChild(button.render());
       list.appendChild(item);
@@ -80,6 +82,6 @@ export class Gallery {
   private onCountryChange = (newCountry: Country) => {
     this.currentCountry = newCountry;
     this.renderCountryToggle();
-    this.refresh()
-  }
+    this.refresh();
+  };
 }

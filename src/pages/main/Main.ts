@@ -1,10 +1,10 @@
-import {Header} from '../../components/header/Header.ts';
-import {Hero} from '../../components/hero/Hero.ts';
-import type {DataHook} from '../../types/DataHook.type.ts';
-import {Hooks} from '../../constants/consts.ts';
-import {Gallery} from '../../components/gallery/Gallery.ts';
-import type {MainProps} from '../../models/MainProps.model.ts';
-import type {NewCollection} from '../../components/new-collection/NewCollection.ts';
+import { Header } from '../../components/header/Header.ts';
+import { Hero } from '../../components/hero/Hero.ts';
+import type { DataHook } from '../../types/DataHook.type.ts';
+import { Hooks } from '../../constants/consts.ts';
+import { Gallery } from '../../components/gallery/Gallery.ts';
+import type { MainProps } from '../../models/MainProps.model.ts';
+import type { NewCollection } from '../../components/new-collection/NewCollection.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -32,12 +32,11 @@ export class MainPage {
     `;
     this.mount(this.hero.render(), Hooks.HERO);
     this.mount(this.gallery.render(), Hooks.GALLERY);
-    this.mount(this.newCollection.render(), Hooks.NEW_COLLECTION)
+    this.mount(this.newCollection.render(), Hooks.NEW_COLLECTION);
   }
 
   private mount(element: HTMLElement, data: DataHook) {
     const container = this.container.querySelector<HTMLElement>(data);
     container?.appendChild(element);
-
   }
 }

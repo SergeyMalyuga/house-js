@@ -1,6 +1,6 @@
-import type {ButtonProps} from '../../models/ButtonProps.model.ts';
-import styles from './Button.module.scss'
-import type {ButtonType} from '../../types/Button.type.ts';
+import type { ButtonProps } from '../../models/ButtonProps.model.ts';
+import styles from './Button.module.scss';
+import type { ButtonType } from '../../types/Button.type.ts';
 
 export class Button {
   private readonly text: string;

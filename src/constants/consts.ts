@@ -1,27 +1,27 @@
-import type {NavLink} from '../models/NavLink.model.ts';
-import type {LinkType} from '../types/LinkType.type.ts';
-import buttonStyles from '../components/button/Button.module.scss'
+import type { NavLink } from '../models/NavLink.model.ts';
+import type { LinkType } from '../types/LinkType.type.ts';
+import buttonStyles from '../components/button/Button.module.scss';
 
 export const LINK_TYPE = {
   HEADER: 'linkHeader' as LinkType,
   FOOTER: 'linkFooter' as LinkType,
-}
+};
 
 export const LINKS_NAV_HEADER: NavLink[] = [
   {
     text: 'Репродукции',
     url: '#',
-    type: LINK_TYPE.HEADER
+    type: LINK_TYPE.HEADER,
   },
   {
     text: 'Новинки',
     url: '#',
-    type: LINK_TYPE.HEADER
+    type: LINK_TYPE.HEADER,
   },
   {
     text: 'О нас',
     url: '#',
-    type: LINK_TYPE.HEADER
+    type: LINK_TYPE.HEADER,
   },
 ];
 
@@ -35,7 +35,7 @@ export const Hooks = {
 export enum Country {
   FR = 'France',
   DE = 'Germany',
-  GB = 'England'
+  GB = 'England',
 }
 
 export const SectionID = {
@@ -46,5 +46,5 @@ export const SectionID = {
 export const BUTTON_TYPE = {
   CARD: `${buttonStyles.buttonCard}`,
   GENERAL: `${buttonStyles.buttonGeneral}`,
+  NEW: `${buttonStyles.buttonNew}`
 } as const;
-

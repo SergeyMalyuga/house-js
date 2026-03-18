@@ -1,6 +1,6 @@
 import style from './Header.module.scss';
-import {ListNav} from '../listNav/ListNav.ts';
-import {LINKS_NAV_HEADER} from '../../constants/consts.ts';
+import { ListNav } from '../listNav/ListNav.ts';
+import { LINKS_NAV_HEADER } from '../../constants/consts.ts';
 
 export class Header {
   private listNav = new ListNav(LINKS_NAV_HEADER);

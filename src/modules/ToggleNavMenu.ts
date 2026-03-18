@@ -1,4 +1,4 @@
-import styles from '../components/header/Header.module.scss'
+import styles from '../components/header/Header.module.scss';
 
 export class ToggleNavMenu {
   private toggleBtn: HTMLButtonElement;
@@ -19,7 +19,7 @@ export class ToggleNavMenu {
       document.body.style.overflowY = 'auto';
     }
     this.navMenu.classList.toggle(`${styles.openNav}`);
-  }
+  };
 
   public destroy() {
     this.toggleBtn.removeEventListener('click', this.toggle);

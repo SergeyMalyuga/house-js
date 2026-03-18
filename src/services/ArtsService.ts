@@ -1,6 +1,6 @@
-import type {Art} from '../models/Art.model.ts';
-import {getArts} from '../data/arts.data.ts';
-import type {Country} from '../constants/consts.ts';
+import type { Art } from '../models/Art.model.ts';
+import { getArts } from '../data/arts.data.ts';
+import type { Country } from '../constants/consts.ts';
 
 export class ArtsService {
   private readonly arts: Art[] = [];

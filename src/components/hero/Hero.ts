@@ -1,9 +1,12 @@
 import styles from './Hero.module.scss';
-import {Button} from '../button/Button.ts';
-import {BUTTON_TYPE, SectionID} from '../../constants/consts.ts';
+import { Button } from '../button/Button.ts';
+import { BUTTON_TYPE, SectionID } from '../../constants/consts.ts';
 
 export class Hero {
-  private readonly button = new Button({text: 'Продукция', classType: BUTTON_TYPE.GENERAL});
+  private readonly button = new Button({
+    text: 'Продукция',
+    classType: BUTTON_TYPE.GENERAL,
+  });
 
   public render() {
     const section = document.createElement('section');
@@ -22,7 +25,7 @@ export class Hero {
 <p class="${styles.text}">Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
 </div>
 </div>
-`
+`;
 
     const blockInfo = section.querySelector(`.${styles.blockInfo}`);
     blockInfo?.appendChild(this.button.render());
