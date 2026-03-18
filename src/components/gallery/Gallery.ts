@@ -26,6 +26,7 @@ export class Gallery {
 
     const section = document.createElement('section');
     section.setAttribute('id', SectionID.GALLERY);
+    section.className = `${styles.gallery}`;
     section.innerHTML = `
     <div class="container">
     <div class="${styles.top}">
