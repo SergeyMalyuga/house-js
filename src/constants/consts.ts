@@ -41,6 +41,8 @@ export enum Country {
 export const SectionID = {
   HERO: 'hero',
   GALLERY: 'gallery',
+  NEW_COLLECTION: 'new-collection',
+  TEAM: 'team',
 } as const;
 
 export const BUTTON_TYPE = {

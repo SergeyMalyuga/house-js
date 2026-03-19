@@ -5,6 +5,7 @@ import { Hooks } from '../../constants/consts.ts';
 import { Gallery } from '../../components/gallery/Gallery.ts';
 import type { MainProps } from '../../models/MainProps.model.ts';
 import type { NewCollection } from '../../components/new-collection/NewCollection.ts';
+import type {Team} from '../../components/team/Team.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -12,6 +13,7 @@ export class MainPage {
   private hero: Hero;
   private gallery: Gallery;
   private newCollection: NewCollection;
+  private team: Team;
 
   constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -19,6 +21,7 @@ export class MainPage {
     this.hero = props.hero;
     this.gallery = props.gallery;
     this.newCollection = props.newCollection;
+    this.team = props.team;
   }
 
   public render() {
@@ -28,6 +31,7 @@ export class MainPage {
     <div data-hook="hero"></div>
     <div data-hook="gallery"></div>
     <div data-hook="new-collection"></div>
+    ${this.team.render()}
 </main>
     `;
     this.mount(this.hero.render(), Hooks.HERO);

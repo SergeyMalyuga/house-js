@@ -1,12 +1,12 @@
 import styles from './NewCollection.module.scss';
 import {Button} from '../button/Button.ts';
-import {BUTTON_TYPE} from '../../constants/consts.ts';
+import {BUTTON_TYPE, SectionID} from '../../constants/consts.ts';
 
 export class NewCollection {
   public render() {
     const section = document.createElement('section');
     const button = new Button({text: 'Ознакомиться', classType: BUTTON_TYPE.NEW});
-    section.setAttribute('id', 'new-collection');
+    section.setAttribute('id', SectionID.NEW_COLLECTION);
     section.className = `${styles.newCollection}`;
     section.innerHTML = `
     <div class="container">
