@@ -15,9 +15,10 @@ export class Hero {
     <div class="${styles.content} container">
     <div class="${styles.blockImage}">
     <picture>
+        <source srcset="/images/raster/hero-bird-576.png" media="(max-width: 576px)"/>
+    <source srcset="/images/raster/hero-bird-768.png" media="(max-width: 768px)"/>
     <source srcset="/images/raster/hero-bird-1440.png" media="(min-width: 769px)"/>
-    <source srcset="/images/raster/hero-bird-768.png" media="(min-width: 569px)"/>
-    <img src="/images/raster/hero-bird-576.png" alt=""/>
+    <img src="" alt="" loading="lazy"/>
 </picture>
 </div>
 <div class="${styles.blockInfo} fg">
