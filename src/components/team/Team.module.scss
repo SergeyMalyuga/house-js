@@ -1,1 +1,35 @@
 @use '../../styles/variables' as variables;
+
+.team {
+  padding: 70px 0;
+
+  @media (width <= 576px) {
+    padding: 55px 0;
+  }
+}
+
+.wrapper {
+  &Image {
+    display: block;
+    max-width: 445px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (width <= 768px) {
+      max-width: 510px;
+    }
+
+    @media (width <= 576px) {
+      max-width: 375px;
+    }
+
+    @media (width <= 480px) {
+      max-width: 290px;
+    }
+  }
+}
