@@ -3,6 +3,7 @@ import type { Header } from '../components/header/Header.ts';
 import type { Gallery } from '../components/gallery/Gallery.ts';
 import type { NewCollection } from '../components/new-collection/NewCollection.ts';
 import type {Team} from '../components/team/Team.ts';
+import type {Footer} from '../components/footer/Footer.ts';
 
 export interface MainProps {
   header: Header;
@@ -10,4 +11,5 @@ export interface MainProps {
   gallery: Gallery;
   newCollection: NewCollection;
   team: Team;
+  footer: Footer;
 }

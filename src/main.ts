@@ -1,25 +1,27 @@
 import './style.scss';
-import { MainPage } from './pages/main/Main.ts';
+import {MainPage} from './pages/main/Main.ts';
 import styles from './components/header/Header.module.scss';
-import { ToggleNavMenu } from './modules/ToggleNavMenu.ts';
-import { ArtsService } from './services/ArtsService.ts';
-import { Header } from './components/header/Header.ts';
-import { Hero } from './components/hero/Hero.ts';
-import { Gallery } from './components/gallery/Gallery.ts';
-import { NewCollection } from './components/new-collection/NewCollection.ts';
+import {ToggleNavMenu} from './modules/ToggleNavMenu.ts';
+import {ArtsService} from './services/ArtsService.ts';
+import {Header} from './components/header/Header.ts';
+import {Hero} from './components/hero/Hero.ts';
+import {Gallery} from './components/gallery/Gallery.ts';
+import {NewCollection} from './components/new-collection/NewCollection.ts';
 import {Team} from './components/team/Team.ts';
+import {Footer} from './components/footer/Footer.ts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app') as HTMLElement;
   const artsService = new ArtsService();
 
   const header = new Header();
+  const footer = new Footer();
   const hero = new Hero();
   const gallery = new Gallery(artsService);
   const newCollection = new NewCollection();
   const team = new Team();
 
-  const mainPage = new MainPage(app, { header, hero, gallery, newCollection, team });
+  const mainPage = new MainPage(app, {header, hero, gallery, newCollection, team, footer});
   mainPage.render();
 
   const navMenu = document.querySelector(`.${styles.nav}`) as HTMLElement;

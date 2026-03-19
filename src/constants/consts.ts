@@ -30,6 +30,7 @@ export const Hooks = {
   HERO: '[data-hook="hero"]',
   GALLERY: '[data-hook="gallery"]',
   NEW_COLLECTION: '[data-hook="new-collection"]',
+  FOOTER: '[data-hook="footer"]',
 } as const;
 
 export enum Country {

@@ -6,6 +6,7 @@ import { Gallery } from '../../components/gallery/Gallery.ts';
 import type { MainProps } from '../../models/MainProps.model.ts';
 import type { NewCollection } from '../../components/new-collection/NewCollection.ts';
 import type {Team} from '../../components/team/Team.ts';
+import type {Footer} from '../../components/footer/Footer.ts';
 
 export class MainPage {
   private container: HTMLElement;
@@ -14,6 +15,7 @@ export class MainPage {
   private gallery: Gallery;
   private newCollection: NewCollection;
   private team: Team;
+  private footer: Footer;
 
   constructor(container: HTMLElement, props: MainProps) {
     this.container = container;
@@ -22,6 +24,7 @@ export class MainPage {
     this.gallery = props.gallery;
     this.newCollection = props.newCollection;
     this.team = props.team;
+    this.footer = props.footer;
   }
 
   public render() {
@@ -32,11 +35,13 @@ export class MainPage {
     <div data-hook="gallery"></div>
     <div data-hook="new-collection"></div>
     ${this.team.render()}
+    <div data-hook="footer"></div>
 </main>
     `;
     this.mount(this.hero.render(), Hooks.HERO);
     this.mount(this.gallery.render(), Hooks.GALLERY);
     this.mount(this.newCollection.render(), Hooks.NEW_COLLECTION);
+    this.mount(this.footer.render(), Hooks.FOOTER);
   }
 
   private mount(element: HTMLElement, data: DataHook) {
