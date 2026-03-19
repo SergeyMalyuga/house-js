@@ -1,1 +1,56 @@
 @use '../../styles/variables' as variables;
+
+.footer {
+  padding: 23px 0;
+  background-color: variables.$bg-main;
+}
+
+.link {
+  &Logo {
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  &Phone {
+    text-decoration: none;
+    color: variables.$link-text-dark;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: left;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: variables.$link-text-hover;
+    }
+
+    &:active {
+      color: variables.$link-text-active;
+    }
+  }
+}
+
+.wrapper {
+  &Communication {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &Contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.label {
+  &Workshop {
+    color: variables.$text-accent-color;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+  }
+}
