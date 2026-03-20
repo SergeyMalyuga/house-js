@@ -5,6 +5,10 @@
   background-color: variables.$bg-main;
 }
 
+.content {
+  display: flex;
+}
+
 .link {
   &Logo {
     display: block;
@@ -52,5 +56,24 @@
     font-size: 18px;
     line-height: 21px;
     text-align: left;
+  }
+}
+
+.title {
+  color: variables.$title-main-color;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.nav {
+  display: flex;
+  gap: 60px;
+
+  ul {
+    flex-direction: column;
+    gap: 6px;
   }
 }

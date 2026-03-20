@@ -1,5 +1,5 @@
-import type { NavLink } from '../models/NavLink.model.ts';
-import type { LinkType } from '../types/LinkType.type.ts';
+import type {NavLink} from '../models/NavLink.model.ts';
+import type {LinkType} from '../types/LinkType.type.ts';
 import buttonStyles from '../components/button/Button.module.scss';
 
 export const LINK_TYPE = {
@@ -23,6 +23,50 @@ export const LINKS_NAV_HEADER: NavLink[] = [
     url: '#',
     type: LINK_TYPE.HEADER,
   },
+];
+
+export const LINKS_NAV_REPRODUCTIONS: NavLink[] = [
+  {
+    text: 'Франция',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  },
+  {
+    text: 'Германия',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  },
+  {
+    text: 'Англия',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  },
+];
+
+export const LINKS_NAV_NEW: NavLink[] = [
+  {
+    text: '2021',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  },
+  {
+    text: '2020',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  }
+];
+
+export const LINKS_NAV_ABOUT: NavLink[] = [
+  {
+    text: 'Художники',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  },
+  {
+    text: 'Менеджеры',
+    url: '#',
+    type: LINK_TYPE.FOOTER,
+  }
 ];
 
 export const Hooks = {
