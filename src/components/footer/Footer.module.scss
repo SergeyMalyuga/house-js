@@ -7,6 +7,11 @@
 
 .content {
   display: flex;
+
+  @media (width <= 969px) {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
 .link {
@@ -34,6 +39,24 @@
       color: variables.$link-text-active;
     }
   }
+
+  &Social {
+    display: block;
+    color: variables.$link-text-dark;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: variables.$link-text-hover
+    }
+
+    &:active {
+      color: variables.$link-text-active
+    }
+
+    svg {
+      display: block;
+    }
+  }
 }
 
 .wrapper {
@@ -41,12 +64,40 @@
     display: flex;
     flex-direction: column;
     gap: 35px;
+    margin-right: 115px;
+
+    @media (width <= 969px) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-right: 0;
+    }
+
+    @media (width <= 393px) {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &Contacts {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  &SocialCopyright {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: auto;
+
+    @media (width <= 969px) {
+      width: 100%;
+      padding-top: 15px;
+      margin-left: 0;
+      align-self: center;
+      align-items: center;
+      border-top: 2px solid variables.$brown-400;
+    }
   }
 }
 
@@ -56,6 +107,11 @@
     font-size: 18px;
     line-height: 21px;
     text-align: left;
+
+    @media (width <= 576px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 }
 
@@ -64,8 +120,11 @@
   font-size: 20px;
   line-height: 23px;
   font-weight: 500;
-  text-align: left;
   margin-bottom: 6px;
+
+  @media (width <= 480px) {
+    text-align: center;
+  }
 }
 
 .nav {
@@ -75,5 +134,45 @@
   ul {
     flex-direction: column;
     gap: 6px;
+  }
+
+  @media (width <= 969px) {
+    justify-content: center;
+  }
+
+  @media (width <= 576px) {
+    a {
+      font-size: 16px;
+    }
+  }
+
+  @media (width <= 480px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.copyright {
+  color: variables.$text-accent-color;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: left;
+
+  span {
+    display: block;
+  }
+
+  @media (width <= 969px) {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.list {
+  &Social {
+    display: flex;
+    gap: 30px;
   }
 }

@@ -35,6 +35,35 @@ ${this.navNew.render()}
 ${this.navAbout.render()}
 </div>
 </nav>
+<div class="${styles.wrapperSocialCopyright}">
+<ul class="${styles.listSocial}">
+<li>
+<a class="${styles.linkSocial}" href="#" aria-label="Facebook">
+<svg width="24" height="24">
+<use href="/images/vector/facebook-icon.svg#facebook-icon"/>
+</svg>
+</a>
+</li>
+<li>
+<a class="${styles.linkSocial}" href="#" aria-label="Instagram">
+<svg width="24" height="24">
+<use href="/images/vector/instagram-icon.svg#instagram-icon"/>
+</svg>
+</a>
+</li>
+<li>
+<a class="${styles.linkSocial}" href="#" aria-label="Youtube">
+<svg width="24" height="24">
+<use href="/images/vector/youtube-icon.svg#youtube-icon"/>
+</svg>
+</a>
+</li>
+</ul>
+<small class="${styles.copyright}">
+Ink. House<sup>®</sup>
+<span>All rights reserved</span>
+</small>
+</div>
 </div>
     `;
     return footer;
